@@ -37,7 +37,7 @@ const Nav = () => {
           <a key={href} href={href}>{label}</a>
           )}
         </div>
-        <a href={WA_LINK} target="_blank" rel="noopener" className="ay-btn ay-btn--sm">
+        <a href={AGENDA_LINK} target="_blank" rel="noopener" className="ay-btn ay-btn--sm">
           Agendar
           <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="1.6"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
         </a>
@@ -50,7 +50,8 @@ const Nav = () => {
           {links.map(([label, href]) =>
         <a key={href} href={href}>{label}</a>
         )}
-          <a href={WA_LINK} target="_blank" rel="noopener" className="ay-btn">Agendar por WhatsApp</a>
+          <a href={AGENDA_LINK} target="_blank" rel="noopener" className="ay-btn ay-btn--accent">Agendar cita en línea</a>
+          <a href={WA_LINK} target="_blank" rel="noopener" className="ay-nav__mobile-secondary">o escribir por WhatsApp</a>
         </div>
       }
     </nav>);
@@ -69,6 +70,18 @@ const Hero = () =>
       <div className="ay-hero__content">
         <h1 className="ay-hero__title">Alison Yara</h1>
         <p className="ay-hero__subtitle">Cosmiatría coreana líder en Bogotá</p>
+        <div className="ay-hero__cta">
+          <a href={AGENDA_LINK} target="_blank" rel="noopener" className="ay-btn ay-btn--primary ay-btn--lg">
+            Agendar cita
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+          </a>
+          <a href={WA_LINK} target="_blank" rel="noopener" className="ay-hero__alt">o escribir por WhatsApp</a>
+        </div>
+        <div className="ay-hero__trust">
+          <span>✦ Pioneros #1 cosmiatría coreana</span>
+          <span>·</span>
+          <span>Tratamientos desde $120.000</span>
+        </div>
       </div>
     </div>
   </section>;
@@ -614,16 +627,22 @@ const CTAFinal = () =>
           <em> coreano</em> de tu piel.
         </h2>
         <p>
-          Agenda tu valoración inicial. Te respondemos en menos de 2 horas
-          en horario hábil.
+          Reserva tu cita en línea, eligiendo tratamiento y horario que se
+          ajuste a tu agenda. ¿Dudas? Escríbenos por WhatsApp.
         </p>
         <div className="ay-cta-final__buttons">
-          <a href={WA_LINK} target="_blank" rel="noopener" className="ay-btn ay-btn--light">
+          <a href={AGENDA_LINK} target="_blank" rel="noopener" className="ay-btn ay-btn--light">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <rect x="3" y="4" width="18" height="18" rx="2"/>
+              <line x1="16" y1="2" x2="16" y2="6"/>
+              <line x1="8" y1="2" x2="8" y2="6"/>
+              <line x1="3" y1="10" x2="21" y2="10"/>
+            </svg>
+            Agendar cita en línea
+          </a>
+          <a href={WA_LINK} target="_blank" rel="noopener" className="ay-btn ay-btn--outline-light">
             <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.6-.8-1.9-.9-.3-.1-.4-.1-.6.1-.2.3-.7.9-.8 1.1-.2.2-.3.2-.5.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.4.1-.5.1-.1.3-.3.4-.5.1-.2.2-.3.2-.5.1-.2 0-.4 0-.5-.1-.1-.6-1.5-.8-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2 0 1.3.9 2.5 1.1 2.7.1.2 1.8 2.7 4.3 3.8.6.3 1.1.4 1.5.5.6.2 1.2.2 1.6.1.5-.1 1.6-.6 1.8-1.3.2-.6.2-1.2.2-1.3-.1-.1-.3-.2-.5-.3zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 4.9L2 22l5.3-1.4c1.4.7 3 1.1 4.7 1.1 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18c-1.5 0-3-.4-4.3-1.2l-.3-.2-3.2.8.9-3.1-.2-.3C4.4 14.7 4 13.4 4 12c0-4.4 3.6-8 8-8s8 3.6 8 8-3.6 8-8 8z" /></svg>
             Escribir por WhatsApp
-          </a>
-          <a href={IG_LINK} target="_blank" rel="noopener" className="ay-btn ay-btn--outline-light">
-            DM en Instagram
           </a>
         </div>
       </div>
