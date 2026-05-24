@@ -9,9 +9,15 @@
 <!-- Canonical -->
 <link rel="canonical" href="https://alisonyaraconsultorio.com/"/>
 
-<!-- Favicon e iconos -->
+<!-- Favicon adaptativo (cambia entre negro/blanco según el tema del navegador) -->
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg"/>
+<!-- Fallback PNG con media queries para navegadores que no soporten SVG -->
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png" media="(prefers-color-scheme: light)"/>
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-white-32.png" media="(prefers-color-scheme: dark)"/>
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192.png" media="(prefers-color-scheme: light)"/>
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-white-192.png" media="(prefers-color-scheme: dark)"/>
+<!-- Fallback genérico (sin media query) para navegadores muy viejos -->
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png"/>
-<link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192.png"/>
 <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"/>
 
 <!-- Open Graph (WhatsApp, Facebook, Instagram, LinkedIn) -->
