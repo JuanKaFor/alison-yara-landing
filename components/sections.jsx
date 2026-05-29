@@ -351,10 +351,22 @@ const EQUIPO = [
   img: "assets/equipo-sofia.jpeg"
 },
 {
+  nombre: "Tatiana Uvillus",
+  rol: "Cosmetóloga · Especialista en Piel",
+  bio: "Esteticista especializada en el cuidado de la piel. Realiza tratamientos faciales como limpiezas profundas y manejo de piel sensible, acné y rosácea. Brinda un servicio profesional, seguro y adaptado a cada paciente.",
+  img: "assets/equipo-tatiana.jpeg"
+},
+{
   nombre: "Nicolás Montoya",
   rol: "Gerente General · Cofundador",
   bio: "Profesional en finanzas e inversiones. Responsable de la visión estratégica del negocio, el crecimiento en ventas y la verificación de que todos los procesos se cumplan a cabalidad.",
   img: "assets/equipo-nicolas.jpeg"
+},
+{
+  nombre: "Daniel Vaca",
+  rol: "Socio",
+  bio: "Ingeniero industrial apasionado por las ventas y el mercadeo. Entusiasta de la estética y la innovación en dermocosmética, aporta visión comercial y estratégica al crecimiento del consultorio.",
+  img: "assets/equipo-daniel.jpeg"
 }];
 
 const Equipo = () =>
