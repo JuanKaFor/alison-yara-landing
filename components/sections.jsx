@@ -359,7 +359,7 @@ const EQUIPO = [
 {
   nombre: "Nicolás Montoya",
   rol: "Gerente General · Cofundador",
-  bio: "Profesional en finanzas e inversiones. Responsable de la visión estratégica del negocio, el crecimiento en ventas y la verificación de que todos los procesos se cumplan a cabalidad.",
+  bio: "Ingeniero Industrial de la Universidad Javeriana. Responsable de la visión estratégica del negocio, el crecimiento en ventas y la verificación de que todos los procesos se cumplan a cabalidad.",
   img: "assets/equipo-nicolas.jpeg"
 },
 {
