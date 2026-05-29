@@ -367,6 +367,12 @@ const EQUIPO = [
   rol: "Socio",
   bio: "Ingeniero industrial apasionado por las ventas y el mercadeo. Entusiasta de la estética y la innovación en dermocosmética, aporta visión comercial y estratégica al crecimiento del consultorio.",
   img: "assets/equipo-daniel.jpeg"
+},
+{
+  nombre: "Juan Camilo Forero",
+  rol: "Asesor Financiero · Estructuración",
+  bio: "Ingeniero Industrial de la Universidad de los Andes especializado en estructuración financiera. Aporta análisis cuantitativo y visión de capital al consultorio, soportando decisiones de inversión, crecimiento y rentabilidad.",
+  img: "assets/equipo-juancamilo.jpeg"
 }];
 
 const Equipo = () =>
@@ -455,40 +461,72 @@ const TESTIMONIOS = [
   text: "Holaaaa. Mil gracias por los procedimientos ayer! Me enredé con el trabajo y se me pasó escribirte. Mi piel quedó divina!"
 },
 {
+  nombre: "Viviana",
+  handle: "AgendaPro · Limpieza Hydrafacial Básica",
+  text: "El servicio espectacular me gusto mucho, son muy amables cumplio con mis expectativas, seria muy bueno como sugerencia muy respetuosa que vendan los productos de Skincare coreano, muchas gracias quede feliz"
+},
+{
+  nombre: "Adriana",
+  handle: "AgendaPro · Limpieza Hydrafacial Básica",
+  text: "Excelente servicio, atención y calidad. Instalaciones limpias, modernas y muy bonitas. El tratamiento realizado de la mejor calidad y hermoso resultado. Recomendado al 100 👌"
+},
+{
   nombre: "Martha",
-  handle: "Instagram DM · Hydrafacial",
-  text: "Yo tengo la piel hermosa después de mi sesión hydrafacial!!!! Casi ni me pongo maquillaje, solo protector solar con color y listo."
+  handle: "AgendaPro · Limpieza Hydrafacial Básica",
+  text: "Excelente servicio, quien me atendió escuchó mis recomendaciones con respecto a mi piel, así que respeto mucho lo que necesitaba! Gracias"
+},
+{
+  nombre: "Paola",
+  handle: "AgendaPro · Limpieza Hydrafacial Básica",
+  text: "Me hice una limpieza hydrafacial me pareció espectacular el resultado en mi piel, hidratada, luminosa la recomiendo."
 }];
 
 
-const Testimonios = () =>
-<section id="testimonios" className="ay-section ay-testimonios">
-    <div className="ay-container">
-      <div className="ay-section__head">
-        <span className="ay-section__eyebrow">— Testimonios</span>
-        <h2 className="ay-h2">
-          Lo que dicen
-          <em> nuestras clientas.</em>
-        </h2>
-      </div>
-      <div className="ay-testi-grid">
-        {TESTIMONIOS.map((t, i) =>
-      <figure key={i} className="ay-testi">
-            <div className="ay-testi__stars">
-              {Array.from({ length: 5 }).map((_, j) =>
-          <svg key={j} viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M12 2l2.9 6.9L22 10l-5.5 4.8L18 22l-6-3.6L6 22l1.5-7.2L2 10l7.1-1.1z" /></svg>
+const Testimonios = () => {
+  const trackRef = React.useRef(null);
+  const scroll = (dir) => {
+    const t = trackRef.current;
+    if (!t) return;
+    const card = t.querySelector('.ay-testi');
+    const step = card ? card.offsetWidth + 24 : 360;
+    t.scrollBy({ left: dir * step, behavior: 'smooth' });
+  };
+  return (
+    <section id="testimonios" className="ay-section ay-testimonios">
+      <div className="ay-container">
+        <div className="ay-section__head ay-testi-head">
+          <div>
+            <span className="ay-section__eyebrow">— Testimonios</span>
+            <h2 className="ay-h2">
+              Lo que dicen
+              <em> nuestras clientas.</em>
+            </h2>
+          </div>
+          <div className="ay-testi-controls">
+            <button type="button" className="ay-testi-btn" onClick={() => scroll(-1)} aria-label="Reseña anterior">‹</button>
+            <button type="button" className="ay-testi-btn" onClick={() => scroll(1)} aria-label="Reseña siguiente">›</button>
+          </div>
+        </div>
+        <div className="ay-testi-track" ref={trackRef}>
+          {TESTIMONIOS.map((t, i) =>
+            <figure key={i} className="ay-testi">
+              <div className="ay-testi__stars">
+                {Array.from({ length: 5 }).map((_, j) =>
+                  <svg key={j} viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M12 2l2.9 6.9L22 10l-5.5 4.8L18 22l-6-3.6L6 22l1.5-7.2L2 10l7.1-1.1z" /></svg>
+                )}
+              </div>
+              <blockquote className="ay-testi__quote">"{t.text}"</blockquote>
+              <figcaption className="ay-testi__author">
+                <span className="ay-testi__nombre">{t.nombre}</span>
+                <span className="ay-testi__handle">{t.handle}</span>
+              </figcaption>
+            </figure>
           )}
-            </div>
-            <blockquote className="ay-testi__quote">"{t.text}"</blockquote>
-            <figcaption className="ay-testi__author">
-              <span className="ay-testi__nombre">{t.nombre}</span>
-              <span className="ay-testi__handle">{t.handle}</span>
-            </figcaption>
-          </figure>
-      )}
+        </div>
       </div>
-    </div>
-  </section>;
+    </section>
+  );
+};
 
 
 // ---------------------------------------------------------------------------

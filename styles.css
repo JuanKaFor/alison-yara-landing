@@ -919,21 +919,71 @@ a { color: inherit; text-decoration: none; }
 /* ---------- Testimonios ---------- */
 
 .ay-testimonios { background: var(--ay-bg-alt); }
-.ay-testi-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+
+/* Header con flechas */
+.ay-testi-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
   gap: 24px;
+  flex-wrap: wrap;
 }
+.ay-testi-controls {
+  display: flex;
+  gap: 10px;
+}
+.ay-testi-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--ay-line);
+  background: var(--ay-bg);
+  color: var(--ay-ink);
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+.ay-testi-btn:hover {
+  background: var(--ay-ink);
+  color: var(--ay-bg);
+  border-color: var(--ay-ink);
+  transform: translateY(-1px);
+}
+
+/* Pista horizontal con scroll snap */
+.ay-testi-track {
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  padding: 4px 4px 12px;
+  margin-top: clamp(32px, 4vw, 56px);
+  /* Permite que asome la siguiente tarjeta en desktop */
+  scroll-padding-left: 4px;
+}
+.ay-testi-track::-webkit-scrollbar { display: none; }
+
 .ay-testi {
   background: var(--ay-bg);
   border-radius: var(--ay-radius-lg);
-  padding: 36px 32px;
+  padding: 32px 28px;
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 18px;
   border: 1px solid var(--ay-line);
+  scroll-snap-align: start;
+  flex: 0 0 85%; /* mobile: 1 visible con peek */
 }
+@media (min-width: 720px)  { .ay-testi { flex: 0 0 calc(50% - 12px); } }     /* 2 visibles */
+@media (min-width: 1100px) { .ay-testi { flex: 0 0 calc(33.333% - 16px); } } /* 3 visibles */
+
 .ay-testi__stars {
   display: flex;
   gap: 2px;
@@ -942,8 +992,8 @@ a { color: inherit; text-decoration: none; }
 .ay-testi__quote {
   font-family: var(--ay-italic);
   font-style: italic;
-  font-size: clamp(20px, 1.8vw, 24px);
-  line-height: 1.4;
+  font-size: clamp(17px, 1.5vw, 20px);
+  line-height: 1.45;
   color: var(--ay-ink);
   margin: 0;
   text-wrap: pretty;
@@ -953,7 +1003,7 @@ a { color: inherit; text-decoration: none; }
   flex-direction: column;
   gap: 2px;
   margin-top: auto;
-  padding-top: 18px;
+  padding-top: 16px;
   border-top: 1px solid var(--ay-line);
 }
 .ay-testi__nombre {
@@ -966,8 +1016,10 @@ a { color: inherit; text-decoration: none; }
   letter-spacing: 0.05em;
   color: var(--ay-ink-mute);
 }
-@media (max-width: 760px) {
-  .ay-testi-grid { grid-template-columns: 1fr; }
+
+/* En mobile, oculta las flechas (el swipe basta) */
+@media (max-width: 720px) {
+  .ay-testi-controls { display: none; }
 }
 
 /* ---------- Ubicación ---------- */
