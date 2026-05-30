@@ -554,9 +554,8 @@ const Ubicacion = () =>
             <div className="ay-address__row">
               <span className="ay-address__label">Horario</span>
               <span className="ay-address__value">
-                Lunes a Viernes · 9:00 a 19:00<br />
-                Sábados · 9:00 a 16:00<br />
-                Domingos cerrado
+                Lunes a Viernes · 10:00 a 18:30<br />
+                Sábados y Domingos · 8:30 a 18:30
               </span>
             </div>
             <div className="ay-address__row">
