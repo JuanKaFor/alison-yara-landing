@@ -739,8 +739,8 @@ const Footer = () =>
           <ul>
             <li><a href={WA_LINK} target="_blank" rel="noopener">WhatsApp · {WHATSAPP}</a></li>
             <li><a href={IG_LINK} target="_blank" rel="noopener">Instagram · @alisonyara.co</a></li>
-            <li>Lun–Vie · 9:00 – 19:00</li>
-            <li>Sáb · 9:00 – 16:00</li>
+            <li>Lun–Vie · 10:00 – 18:30</li>
+            <li>Sáb y Dom · 8:30 – 18:30</li>
           </ul>
         </div>
       </div>
