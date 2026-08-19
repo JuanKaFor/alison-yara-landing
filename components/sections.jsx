@@ -91,7 +91,7 @@ const Hero = () =>
 // CATEGORÍAS — 4-card photo grid (Dra. Carolina style)
 // ---------------------------------------------------------------------------
 const CATEGORIAS = [
-  { nombre: "Faciales", img: "assets/galeria-tratamiento.jpeg", desc: "Limpiezas profundas Hydrafacial coreanas en 12, 15 o 17 pasos. Diagnóstico con escáner facial IA.", href: "#servicios" },
+  { nombre: "Faciales", img: "assets/galeria-tratamiento.jpeg", desc: "Limpiezas profundas Hydrafacial coreanas con activos de Seúl. Combínalas con Dermapen o Porcelanización LHALA.", href: "#servicios" },
   { nombre: "Cejas", img: "assets/galeria-ceja.jpeg", desc: "Laminado coreano que alinea, define y disciplina el vello para un acabado natural y duradero.", href: "#servicios" },
   { nombre: "Pestañas", img: "assets/galeria-pestanas.jpeg", desc: "Lifting con cisteamina coreana: realza la curvatura natural sin agredir la fibra capilar.", href: "#servicios" },
   { nombre: "Labios", img: "assets/galeria-labios.jpeg", desc: "Hydralips con Dermapen y ácido hialurónico no reticulado para una hidratación profunda y real.", href: "#servicios" }
@@ -206,27 +206,27 @@ const SERVICIOS = [
   img: "assets/lifting-pestanas.jpeg"
 },
 {
-  nombre: "Limpieza Hydrafacial Coreana — Básica",
+  nombre: "Hydrafacial Coreana Básica",
   flag: "🇰🇷",
-  precio: "180.000",
-  desc: "Tratamiento de 12 pasos que combina técnicas profesionales con activos coreanos para una limpieza profunda y segura. Elimina células muertas, desobstruye poros y retira impurezas acumuladas.",
-  pasos: ["Aromaterapia", "Jabón enzimático Esthemax", "Desincrutante", "Papel osmótico (Osmoextracción coreana)", "Vapor ozono", "Máquina Hydrafacial (succión suave)", "Extracción manual (si es necesario)", "Alta frecuencia", "Cabina fotodinámica", "Mascarilla Aloe Vera", "Serum ADN/PDRN de salmón", "Bloqueador solar"],
+  precio: "280.000",
+  desc: "Limpieza facial profunda que combina la tecnología Hydrafacial con activos coreanos, ayudando a eliminar impurezas, exceso de grasa y células muertas para dejar la piel limpia, renovada y preparada para recibir los activos.",
+  pasos: ["Recepción + Aromaterapia", "Limpieza jabón enzimático Esthemax + Desincrustante Videlca", "Papel Osmótico + Vapor Ozono", "HydraFacial", "Extracción manual (si es necesario)", "Alta frecuencia", "Tónico", "Martillo Calmante", "Mascarilla + Fotodinámica", "Serum ADN + Bloqueador + gafas relajantes"],
   img: "assets/hydrafacial-basica.jpeg"
 },
 {
-  nombre: "Limpieza Hydrafacial Coreana — Pro",
+  nombre: "Hydrafacial Coreana + Dermapen",
   flag: "🇰🇷",
-  precio: "280.000",
-  desc: "Protocolo de 15 pasos con mascarilla Hydrojelly personalizada, ampolleta con ultrasonido y presoterapia ocular. Resultados visibles desde la primera sesión.",
-  pasos: ["Aromaterapia", "Jabón enzimático Esthemax", "Desincrutante", "Papel osmótico", "Vapor ozono", "Máquina Hydrafacial", "Extracción manual (si es necesario)", "Alta frecuencia", "Tónico", "Mascarilla Hydrojelly según necesidades (PDRN, acné, hidratación o retinol)", "Cabina fotodinámica", "Ampolleta con ultrasonido (hidratación, vitamina C o colágeno)", "Serum ADN de salmón", "Presoterapia ocular", "Bloqueador solar"],
+  precio: "380.000",
+  desc: "Tratamiento que combina una limpieza facial profunda con tecnología Hydrafacial y activos coreanos, seguida de Dermapen para favorecer la penetración de activos y estimular la renovación de la piel, logrando una piel más uniforme, luminosa y renovada.",
+  pasos: ["Aromaterapia", "Jabón enzimático Coreano de Esthemax", "Desincrustante Videlca para descongestión de poros", "Papel Osmótico técnica de ósmosis Coreana + Vapor Ozono", "HydraFacial: limpieza profunda más exfoliación", "Extracción manual (si es necesario)", "Alta frecuencia", "Antiséptico Clorhexidina acuosa al 2% (no alcohólica) para preparar la piel", "Dermapen + Ampolleta según necesidad", "Martillo frío (sellado y calma)", "Cabina Fotodinámica + Mascarilla Coreana Hydrojelly ADN de salmón", "Serum ADN/PDRN + Bloqueador solar + gafas relajantes"],
   img: "assets/hydrafacial-pro.jpeg"
 },
 {
-  nombre: "Limpieza Hydrafacial Coreana — Gold",
+  nombre: "Hydrafacial Coreana + Porcelanización",
   flag: "✦",
-  precio: "380.000",
-  desc: "Nuestro protocolo más completo: 17 pasos que inician con un análisis facial por escáner con IA y guía de skincare personalizada. La experiencia más avanzada del consultorio.",
-  pasos: ["Análisis completo con escáner facial IA", "Guía de skincare personalizada", "Aromaterapia", "Jabón enzimático Esthemax", "Desincrutante", "Papel osmótico", "Vapor ozono", "Máquina Hydrafacial", "Extracción manual (si es necesario)", "Alta frecuencia", "Tónico", "Mascarilla Hydrojelly según necesidades", "Cabina fotodinámica", "Ampolleta con ultrasonido", "Serum ADN de salmón", "Presoterapia ocular", "Bloqueador solar"],
+  precio: "480.000",
+  desc: "Tratamiento que combina una limpieza facial profunda con tecnología Hydrafacial y activos coreanos, seguida de la Porcelanización Coreana con LHALA Peel para favorecer la renovación de la piel y mejorar su apariencia, dejándola más uniforme, luminosa y suave.",
+  pasos: ["Aromaterapia", "Jabón Lhala Foam (tecnología de burbujas que limpia a profundidad)", "Desincrustante para ablandar los poros", "Papel Osmótico técnica de ósmosis coreana + Vapor Ozono", "HydraFacial: limpia los poros a profundidad", "Extracción manual", "Alta frecuencia", "Peeling Paso 1 + Fotodinámica (renueva la superficie y exfolia)", "Peeling Paso 2 + Presoterapia ocular (repara, regenera e hidrata en profundidad)", "Mascarilla reparadora coreana + Fotodinámica final", "Bloqueador solar"],
   img: "assets/hydrafacial-gold.jpeg"
 }];
 
